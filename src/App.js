@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar.js';
+import ProductList from './components/ProductList.js';
+import Textform from './components/Textform.js';
 
 function App() {
+  const product = [
+    {
+      price:99999,
+      name:"Iphone XR",
+      quantity:0,
+    },
+    {
+      price:9999,
+      name:"Vivo V20",
+      quantity:0,
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <>
+ <Navbar/>
+ <div className='container mt-3'>
+ <Textform heading="Enter The Text To Analyze"/>
+ </div>
+ </>
   );
 }
 
